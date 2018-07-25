@@ -254,6 +254,7 @@ public class BannerLayout extends FrameLayout {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                getParent().requestDisallowInterceptTouchEvent(true);
                 setPlaying(false);
                 break;
             case MotionEvent.ACTION_UP:
